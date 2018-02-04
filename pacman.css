@@ -1,0 +1,98 @@
+body{
+    background-color: black;
+    margin: 0px;
+    font-size: 0px; /*weird trick to remove spaces between rows*/
+}
+div#container{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    display: none;
+    width: 260px;
+    padding: 50px 0px;
+    margin-left: 20px;
+    font-size: xx-large;
+    color: yellow;
+    border: 3px double yellow;
+    font-style: italic;
+    position: absolute;
+    background: black;
+    z-index: 1;
+    text-align: center;
+    animation-name: level-passed;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+@keyframes level-passed{
+    25%   {color: #00ffde;}
+    50%  {color: red;}
+    75%  {color: #ffb8de;}
+    100% {color: #ffb847;}
+    25% {border-color: #ffb847;}
+    50%  {border-color: #ffb8de;}
+    75%  {border-color: red;}
+    100%   {border-color: #00ffde;}
+}
+div.row div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+div#world{
+    position: relative;
+}
+div.brick{
+    background-color: blue;
+}
+div.empty{
+    background-color: black;
+}
+div.coin{
+    background-image: url('images/coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div#pacman{
+    background-image: url('images/pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /* transform: rotate(90deg); */
+}
+div#score{
+    width: 96px;
+    height: 20px;
+    border: 1px solid white;
+    color: yellow;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    left: 350px;
+    font-size: 13pt;
+}
+div#fruit{
+    background-image: url('images/cherries.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div.fruits-eaten{
+    position: absolute;
+    display: inline-block;
+    width: 120px;
+    left: 350px;
+    top: 6px;
+}
+div.fruits-eaten img{
+    display: none;
+    width: 20px;
+    height: 20px;
+}
